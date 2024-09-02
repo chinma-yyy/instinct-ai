@@ -3,6 +3,7 @@ certifi==2024.8.30
 charset-normalizer==3.3.2
 click==8.1.7
 Flask==3.0.3
+Flask-PyMongo==2.3.0
 future==1.0.0
 h2o==3.46.0.5
 idna==3.8
