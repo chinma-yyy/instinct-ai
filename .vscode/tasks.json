@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "presentation": {
+    "echo": false,
+    "reveal": "always",
+    "focus": false,
+    "panel": "dedicated",
+    "showReuseMessage": true
+  },
+  "tasks": [
+    {
+      "label": "React",
+      "type": "shell",
+      "command": "npm install && npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/client"
+      },
+      // Try start the task on folder open
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "group": "h2o"
+      }
+    },
+    {
+      "label": "Flask",
+      "type": "shell",
+      "command": "if [ -d \"${workspaceFolder}/server/venv\" ]; then source ${workspaceFolder}/server/venv/bin/activate; else python3 -m venv ${workspaceFolder}/server/venv && source ${workspaceFolder}/server/venv/bin/activate && pip install -r ${workspaceFolder}/server/requirements.txt; fi && python ${workspaceFolder}/server/app.py",
+      "options": {
+        "cwd": "${workspaceFolder}/server"
+      },
+      // Try start the task on folder open
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "group": "h2o"
+      }
+    }
+  ]
+}
